@@ -1,22 +1,22 @@
-import React from 'react'
-import image from "../../assets/react.svg"
-import "./Card.css"
+ import "./Card.css"
 import { Link } from 'react-router-dom';
-function Card(  ) {
+
+ 
+const Card  = (props: any) => {  
   return (
-      <Link to={`/country-details/rwanda`}>
+      <Link to={`/country-details/${props?.countries?.name}`}>
         <div className='card'>
           <div className="card-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/255px-Flag_of_Rwanda.svg.png"/>
+            <img src={props?.countries?.flag}/>
           </div>
           <div className="card-body">
             <div className="card-title">
-              <h2>Rwanda</h2>
+              <h2>{props?.countries?.name}</h2>
             </div>
             <div className="card-desc">
-                <p><strong>Population</strong>: 12,000,000</p>
-                <p><strong>Region</strong>: Africa</p>
-                <p><strong>Capital</strong>: Kigali</p>
+                <p><strong>Population</strong>: {props?.countries?.population}</p>
+                <p><strong>Region</strong>: {props?.countries?.region}</p>
+                <p><strong>Capital</strong>: {props?.countries?.capital}</p>
             </div>
           </div>
         </div>

@@ -1,9 +1,15 @@
-import React from 'react'
 import "./Filters.css"
 import {
     SearchOutlined
 } from '@ant-design/icons';
-function Filters() {
+
+
+interface ChildProps {
+  name: (data: any) => void;
+}
+
+ 
+ const Filters: React.FC<ChildProps> = ( ) => {
   return (
     <div className="filters">
         <div className='filter_container'>
@@ -14,7 +20,7 @@ function Filters() {
                 </div>
             </div>
             <div className="region_filter">
-                <select name='region_filt'>
+                <select name='region_filt' value={'region'} >
                     <option>Africa</option>
                     <option>America</option>
                     <option>Asia</option>

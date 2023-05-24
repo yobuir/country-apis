@@ -5,6 +5,7 @@
     background: #ffff;
     border-radius: 5px;
     position: relative;
+    min-height: 330px;
 ;
 }
 .card .card-image img{

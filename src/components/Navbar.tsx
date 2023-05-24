@@ -1,5 +1,4 @@
-import React from 'react'
-import './Navbar.css'
+ import './Navbar.css'
 function Navbar() {
   return (
     <div className="navbar">
@@ -8,9 +7,8 @@ function Navbar() {
           <h2>Where in the world ?</h2>
         </div>
         <div className='left_nav'>
-          <span className='light'> light mode</span> 
-          <span className='dark'> Dark mode</span> 
-       
+          <span className='light'> light</span> 
+          <span className='dark'> Dark</span> 
         </div>
       </div>
     
